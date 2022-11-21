@@ -1,0 +1,52 @@
+@import "../../Sass/mixins&var";
+
+.counterSection {
+    @include flex(row, space-between, center, 12px);
+
+
+    button {
+        cursor: pointer;
+    }
+
+    .addItem {
+        padding: 0 4px;
+        width: fit-content;
+        min-width: 25px;
+        height: 25px;
+        border: none;
+        border-radius: 3px;
+        color: $whiteColor;
+        font-size: 1rem;
+        background-color: $primaryColor;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .deleteItem {
+        @extend .addItem;
+        padding: 3px 5px !important;
+
+        img {
+            width: 15px;
+            filter: invert(100%) sepia(6%) saturate(7353%) hue-rotate(309deg) brightness(139%) contrast(126%);
+        }
+    }
+
+    .decreaseItem {
+        @extend .addItem;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 570px) {
+    .counterSection {
+    
+        .addItem {
+            font-size: 0.9rem;
+        }
+    
+        .deleteItem {
+            img {
+                width: 12px;
+            }
+        }
+    }
+}

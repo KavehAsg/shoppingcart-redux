@@ -1,7 +1,7 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-// import ItemCounter from "../ItemCounter/ItemCounter";
+import ItemCounter from "../ItemCounter/ItemCounter";
 
 //style
 import styled from "./ProductCard.module.scss";
@@ -23,8 +23,8 @@ const ProductCard = ({ productData }) => {
       </div>
 
       <div className={styled.btnContainers}>
-        {/* <Link to={`/detailpage/${id}`}>details</Link> */}
-        {/* <ItemCounter id={id} productData={productData} /> */}
+        <Link to={`/detailpage/${id}`}>details</Link>
+        <ItemCounter id={id} productData={productData} />
       </div>
     </div>
   );
