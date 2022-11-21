@@ -1,0 +1,53 @@
+@import "../../Sass/mixins&var";
+
+.navbar {
+  padding: 10px 36px;
+  background-color: $secondColor;
+  -webkit-box-shadow: 0px 15px 18px -2px rgba(0,0,0,0.15); 
+box-shadow: 0px 15px 18px -2px rgba(0,0,0,0.15);
+  @include flex(row, space-between, center, 0);
+}
+
+.shopCart {
+  @include flex(row, space-between, center, 12px);
+  padding: 3px;
+  border-radius: 3px;
+  height: 40px;
+  transition: all 0.1s linear;
+  border: 1px solid $secondColor;
+
+  a img {
+    width: 30px;
+    user-select: none;
+  }
+
+  span {
+    display: inline-block;
+    background-color: $primaryColor;
+    width: 20px;
+    height: 80%;
+    padding: 2px;
+    color: $whiteColor;
+    @include flex(row, center, center, 0);
+    border-radius: 3px;
+    transition: all 0.1s linear;
+  }
+
+  &:hover {
+    border: 1px solid $primaryColor;
+
+    span {
+      height: 100%;
+    }
+  }
+}
+
+.productLink {
+  text-decoration: none;
+  font-size: 1.2rem;
+
+  &:hover {
+    text-decoration: underline;
+    color: $textColor;
+  }
+}
