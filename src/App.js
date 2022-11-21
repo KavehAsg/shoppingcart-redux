@@ -1,16 +1,16 @@
-import React from 'react';
+import React , { useEffect }from 'react';
 
 import { Routes , Route } from 'react-router-dom';
 
-import { useEffect } from 'react';
+//api redux action
 import { fetchData } from './features/Products/productsSlice';
 import { useDispatch } from 'react-redux';
 
+//components
 import CardContainer from './components/ProductStore/CardsContainer';
 import Navbar from './components/Navbar/Navbar';
 import DetailsPage from './components/DetailsPage/DetailsPage';
 import CartPage from './components/CartPage/CartPage';
-import Loading from './components/Loading/Loading';
 
 function App() {
 

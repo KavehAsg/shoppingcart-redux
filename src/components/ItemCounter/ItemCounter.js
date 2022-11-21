@@ -3,6 +3,7 @@ import React from 'react';
 //Styles
 import styled from './ItemCounter.module.scss';
 
+//redux actions
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem, removeItem, incrementItem , decrementItem } from '../../features/Cart/CartSlice';
 

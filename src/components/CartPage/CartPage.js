@@ -4,8 +4,7 @@ import React from 'react';
 import CartItem from './CartItem';
 import InfoSection from './InfoSection';
 
-//Cart Context
-// import { CartContext } from '../../Context/CartReducerContext';
+//redux store
 import { useSelector } from 'react-redux';
 
 //Styles

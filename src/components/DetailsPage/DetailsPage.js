@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
+//api
 import { fetchProductById } from "../../Services/API";
 
-// import CardLoading from "../LoadingComponents/CardLoading";
+//components
+import Loading from "../Loading/Loading";
 
 //style
 import styled from "./DetailsPage.module.scss";
@@ -22,7 +24,7 @@ const DetailsPage = () => {
 
   return (
     <div className={styled.detailPage}>
-      {/* {!data.id && <CardLoading />} */}
+      {!data.id && <Loading />}
       {!!data.id &&
         <div className={styled.container}>
           <div className={styled.imgContainer}>

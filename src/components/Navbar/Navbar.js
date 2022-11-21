@@ -1,6 +1,7 @@
 import React from "react";
 import { Link , useNavigate} from 'react-router-dom';
 
+//redux store
 import { useSelector } from "react-redux";
 
 //styles
@@ -12,7 +13,6 @@ import CartIcon from '../../assets/shopIcon.svg';
 
 const Navbar = () => {
 
-  // const { cartReducer } = useContext(CartContext);
   const totalQuantity = useSelector(state => state.cart.totalQuantity);
 
   const navigate = useNavigate();

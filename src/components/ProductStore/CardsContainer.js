@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from './CardsContainer.module.scss';
+
+//components
+import Loading from '../Loading/Loading';
 import ProductCard from './ProductCard';
 
-import Loading from '../Loading/Loading';
-
+//redux store
 import { useSelector } from 'react-redux';
 
 const CardContainer = () => {
