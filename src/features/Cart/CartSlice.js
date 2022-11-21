@@ -64,39 +64,5 @@ export const cartSlice = createSlice({
     }
 });
 
-export const { addItem, removeItem, incrementItem, decrementItem } = cartSlice.actions;
+export const { addItem, removeItem, incrementItem, decrementItem , clearAll } = cartSlice.actions;
 export default cartSlice.reducer;
-
-/*
-const userReducer = produce((draft, action) => {
-    switch (action.type) {
-        case "renameUser":
-            // OK: we modify the current state
-            draft.users[action.payload.id].name = action.payload.name
-            return draft // same as just 'return'
-        case "loadUsers":
-            // OK: we return an entirely new state
-            return action.payload
-        case "adduser-1":
-            // NOT OK: This doesn't do change the draft nor return a new state!
-            // It doesn't modify the draft (it just redeclares it)
-            // In fact, this just doesn't do anything at all
-            draft = {users: [...draft.users, action.payload]}
-            return
-        case "adduser-2":
-            // NOT OK: modifying draft *and* returning a new state
-            draft.userCount += 1
-            return {users: [...draft.users, action.payload]}
-        case "adduser-3":
-            // OK: returning a new state. But, unnecessary complex and expensive
-            return {
-                userCount: draft.userCount + 1,
-                users: [...draft.users, action.payload]
-            }
-        case "adduser-4":
-            // OK: the immer way
-            draft.userCount += 1
-            draft.users.push(action.payload)
-            return
-    }
-})*/

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from './CardsContainer.module.scss';
 import ProductCard from './ProductCard';
-// import CardLoading from '../LoadingComponents/CardLoading';
+
+import Loading from '../Loading/Loading';
 
 import { useSelector } from 'react-redux';
 
@@ -12,11 +13,7 @@ const CardContainer = () => {
 
     return (
         <div className={styled.cardsContainer}>
-            {/* {products.length === 0 &&
-                [...Array(3)].map((x, i) =>
-                    <CardLoading key={i} />
-                )
-            } */}
+            {products.isLoading && <Loading />}
             {!products.isLoading && products.data.map((product) => {
                 return <ProductCard key={product.id} productData={product} />
             })}

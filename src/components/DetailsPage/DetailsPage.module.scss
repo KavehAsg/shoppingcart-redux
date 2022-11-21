@@ -1,0 +1,99 @@
+@import "../../Sass/mixins&var";
+
+.detailPage {
+    padding: 46px 56px;
+
+    .container {
+        @include flex(row, space-between, center, 44px);
+        padding: 24px;
+        border: 1px solid $borderColor;
+        border-radius: 10px;
+    }
+}
+
+.imgContainer {
+    img {
+        width: 300px;
+    }
+}
+
+.detailsContainer {
+    border: 1px solid $borderColor;
+    padding: 28px;
+    border-radius: 10px;
+    @include flex(column, space-between, flex-start, 70px);
+}
+
+.texts {
+    @include flex(column, space-between, flex-start, 10px);
+
+    .title {
+        color: $primaryColor;
+    }
+
+    .category {
+        color: $hintColor;
+    }
+
+    .description {
+        margin-top: 24px;
+        font-size: 1.2rem;
+    }
+}
+
+.lables {
+    span {
+        display: inline-block;
+        margin-right: 18px;
+
+        &:nth-child(2) {
+            background-color: $secondColor;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        &:nth-child(3) {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+}
+
+@media (min-width: 300px) and (max-width: 870px) {
+
+    .detailPage {
+        padding: 32px 16px;
+        .container {
+            @include flex(column, space-between, center, 44px);
+        }
+    }
+}
+
+@media (min-width: 300px) and (max-width: 481px) {
+    .imgContainer {
+        @include flex(row, center, center, 0);
+
+        img {
+            width: 80%;
+        }
+    }
+
+    .detailsContainer {
+        padding: 18px;
+        border-radius: 10px;
+        @include flex(column, space-between, flex-start, 70px);
+    }
+
+    .texts {
+    
+        .title {
+            font-size: 1.3rem;
+        }
+    
+        .description {
+            margin-top: 14px;
+            font-size: 1rem;
+        }
+    }
+}

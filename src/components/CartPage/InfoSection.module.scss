@@ -1,0 +1,36 @@
+@import "../../Sass/mixins&var";
+
+.container{
+    position: sticky;
+    top: 0;
+    width: 30%;
+    padding: 16px 24px;
+
+    @include flex(column , flex-start , flex-start , 28px);
+}
+
+.details{
+    @include flex(column , flex-start , flex-start , 10px);
+}
+
+.buttons{
+    width: 100%;
+    @include flex(row , space-between , center , 10px);
+
+    button{
+        font-size: 1.1rem;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: $primaryColor;
+        color: $whiteColor;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 870px) {
+    .container{
+        width: 100%;
+        padding: 12px 14px;
+    }
+}
